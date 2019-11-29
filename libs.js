@@ -3,7 +3,7 @@
 const lib = {};
 
 const libNames = [
-  'urls', 'consts', 'parseurls'
+  'urls', 'consts', 'types'
 ];
 const libPath = './libs/';
 for (const value of libNames) {
