@@ -3,7 +3,7 @@
 const lib = {};
 
 const libNames = [
-  'urls', 'consts', 'types'
+  'urls', 'consts', 'types', 'classpage'
 ];
 const libPath = './libs/';
 for (const value of libNames) {
