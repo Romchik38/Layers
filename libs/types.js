@@ -1,6 +1,8 @@
 'use strict';
 
 const buildPage = require('./buildpage');
+const path = require('path');
+const fs = require('fs');
 
 const types = {
   'string': (param) => {
@@ -19,7 +21,28 @@ const types = {
     return { writeHead, data: html };
   },
   'number': () => {},
-  'object': () => {},
+  'object': (param, page) => {
+    const url = page.url;
+    const ext = path.extname(url);
+    const folder = param[ext];
+    if (folder) {
+      const filePath = `./${folder}${url}`;
+      try {
+        const data = fs.readFileSync(filePath);
+        return { writeHead: [200], data };
+      } catch (e) {
+        console.log('Error', e);
+        return { writeHead: [404], data: '<h1>File not found</h1>' };
+      }
+    } else {
+      const writeHead = [404];
+      return {
+        writeHead,
+        data: `<h1>Not Found</h1>\nThe Url ${page.url} was not found on our
+          site`,
+      };
+    }
+  },
   undefined: (param, page) => {
     buildPage(page);
     const html = page.htmlTemplate();
