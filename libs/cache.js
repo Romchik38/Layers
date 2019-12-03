@@ -1,18 +1,24 @@
 'use strict';
 
-let counter = 0;
+const MAX_SIZE = 100;
 
 const makeCache = () => {
-  const cache = Object.create(null);
+  const cache = new Map();
   const cached = (url, data) => {
-    const res = cache[url];
+    const res = cache.get(url);
     if (res) {
-      console.log('from cache, url', url, Object.keys(cache).length);
       return res;
     } else if (data) {
-      cache[url] = data;
-      console.log(++counter);
-      console.log('added to cache url', url, Object.keys(cache).length);
+      const status = data.writeHead[0];
+      if (status !== 200) return;
+      if (cache.size < MAX_SIZE) {
+        cache.set(url, data);
+      } else {
+        const keys = [...cache.keys()];
+        cache.delete(keys[0]);
+        cache.set(url, data);
+        console.log('replaced in cache url', cache, cache.size);
+      }
     }
   };
   return cached;
