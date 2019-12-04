@@ -1,42 +1,29 @@
 'use strict';
 
 const fs = require('fs');
-const indexes = require('../database/indexes');
+const path = require('path');
 
-const goods = JSON.parse(fs.readFileSync('../database/goods.json'));
+const DIR_PATH = '../database/';
+const dir = fs.readdirSync(DIR_PATH);
 const base = Object.create(null);
-
-const addTable = (name, data, indexes) => {
-  base[name] = [data];
-  const arr = base[name];
-  const indexObject = {};
-  for (const value of indexes) {
-    const index = {};
-    for (const elem of data) {
-      const res = elem[value];
-      if (res) {
-        const i = data.indexOf(elem);
-        const v = elem[value];
-        index[v] = i;
-      }
-    }
-    if (Object.keys(index).length > 0) {
-      indexObject[value] = index;
-    }
-  }
-  if (Object.keys(indexObject).length > 0) {
-    arr.push(indexObject);
-  }
+const addTable = (name, table) => {
+  base[name] = table;
 };
 
-addTable('goods', goods, indexes['goods']);
-console.log('base is: ', base);
-//query 0 - table
-// 1 - property
-// 2 - logic
-// 3 - looking for
-const database = query => {
-  console.log(query);
+for (const fileName of dir) {
+  const table = JSON.parse(fs.readFileSync(DIR_PATH + fileName));
+  const onlyName = path.parse(fileName)['name'];
+  addTable(onlyName, table);
+}
+
+const database = (name, callback) => {
+  const table = base[name];
+  const result = [];
+  for (const item of table) {
+    const res = callback(item);
+    if (res) result.push(res);
+  }
+  if (result.length > 0) return result;
 };
 
 module.exports = database;

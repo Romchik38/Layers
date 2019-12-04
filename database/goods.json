@@ -2,6 +2,11 @@
   {
     "model": "Samsung A620",
     "sku": "23100",
-    "price": "250"
+    "price": 250
+  },
+  {
+    "model": "Nokia N90",
+    "sku": "15201",
+    "price": 450
   }
 ]

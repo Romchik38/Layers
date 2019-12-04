@@ -2,12 +2,13 @@
 
 const database = require('./database');
 
-const data = Object.create(null);
-Object.assign(data, { database });
+const databases = Object.create(null);
 
-const connector = (name, query) => {
-  const base = data[name];
-  return base(query);
+Object.assign(databases, { database });
+
+const connector = (name, ...args) => {
+  const base = databases[name];
+  return base(...args);
 };
 
 module.exports = connector;
