@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const DIR_PATH = '../database/';
+const DIR_PATH = process.env.PWD + '/database/';
 const dir = fs.readdirSync(DIR_PATH);
 const base = Object.create(null);
 const addTable = (name, table) => {

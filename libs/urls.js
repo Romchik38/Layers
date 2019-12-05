@@ -1,15 +1,17 @@
 'use strict';
 
+const { main, catalog, good } = require('./urlsfn');
+
 const urls = {
-  '/': () => 'main.page',
+  '/': main,
   '/*\\.*': {
     '.ico': 'img',
     '.jpeg': 'img',
     '.js': 'scripts',
   },
-  '/phones': () => 'catalog.page',
+  '/phones': catalog,
   '/A620': '/samsungA620-1',
-  '/samsungA620-1': () => 'good.page',
+  '/samsungA620-1': good,
 };
 
 const matching = [];

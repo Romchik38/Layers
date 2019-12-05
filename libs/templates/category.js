@@ -1,7 +1,11 @@
 'use strict';
 
-const tem = () => {
+const tem = parameters => {
   const data = `
+  <head>
+    <title>${parameters.title}</title>
+  </head>
+  <body>
    <h1>Category Page </h1>
    <p>Choose on of our product.</p>
    <ul>
@@ -21,6 +25,7 @@ const tem = () => {
        <p>Price: 450$</p>
      </article>
    </section>
+  </body>
 
   `;
   return data;

@@ -1,6 +1,8 @@
 [
   {
     "name": "Mobile phones",
-    "goods": ["23100", "15201"]
+    "goods": ["23100", "15201"],
+    "url": "/phones",
+    "title": "Mobile Phones - Spheres everywhere"
   }
 ]
