@@ -7,6 +7,7 @@ const urls = {
   '/*\\.*': {
     '.ico': 'img',
     '.jpeg': 'img',
+    '.png': 'img',
     '.js': 'scripts',
   },
   '/phones': catalog,

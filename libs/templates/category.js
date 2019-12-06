@@ -1,18 +1,17 @@
 'use strict';
 
+const headTemplate = require('./heads/head');
+const headerTemplate = require('./headers/header');
+const footerTemplate = require('./footers/footer.js');
+
 const tem = parameters => {
+  const head = headTemplate(parameters);
+  const header = headerTemplate(parameters);
+  const footer = footerTemplate(parameters);
   const data = `
-  <head>
-    <title>${parameters.title}</title>
-  </head>
   <body>
    <h1>Category Page </h1>
    <p>Choose on of our product.</p>
-   <ul>
-     <li><a href="/" target="_self">Main page</a></li>
-     <li>Phones</li>
-     <li><a href="#" target="_self">Cases</a></li>
-   </ul>
    <section>
      <article>
        <h2>Good 1</h2>
@@ -25,10 +24,12 @@ const tem = parameters => {
        <p>Price: 450$</p>
      </article>
    </section>
+   </br>${footer}
   </body>
 
   `;
-  return data;
+  const html = head.concat(header).concat(data);
+  return html;
 };
 
 module.exports = tem;
