@@ -5,12 +5,15 @@ const path = require('path');
 const urlsTemplate = require('./urlstemplate');
 const PATH_TEMPLATE = './libs/templates';
 
-const names = fs.readdirSync(PATH_TEMPLATE, 'utf8');
+const names = fs.readdirSync(PATH_TEMPLATE);
 const templates = Object.create(null);
 
 for (const name of names) {
-  const onlyName = path.parse(name)['name'];
-  templates[onlyName] = require(`./templates/${name}`);
+  const ext = path.parse(name)['ext'];
+  if (ext) {
+    const onlyName = path.parse(name)['name'];
+    templates[onlyName] = require(`./templates/${name}`);
+  }
 }
 
 const getTemplate = page => {
