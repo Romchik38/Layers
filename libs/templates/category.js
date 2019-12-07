@@ -8,21 +8,23 @@ const tem = parameters => {
   const head = headTemplate(parameters);
   const header = headerTemplate(parameters);
   const footer = footerTemplate(parameters);
-  const data = `
+  const { categoryGoods, categoryName } = parameters;
+  let data = `
   <body>
-   <h1>Category Page </h1>
+   <h1>${categoryName}</h1>
    <p>Choose on of our product.</p>
-   <section>
-     <article>
-       <h2>Good 1</h2>
-       <p>Nice choice for everyone</p>
-       <p>Price: 250$</p>
-     </article>
-     <article>
-       <h2>Good 2</h2>
-       <p>Best by. One choice, one phone</p>
-       <p>Price: 450$</p>
-     </article>
+   <section>`;
+     for (const good of categoryGoods) {
+      data += `
+        <article>
+          <h2>${good.model}</h2>
+          <p>${good.shortDescription}</p>
+          <p>Price: ${good.price}$</p>
+          <p>Sku: ${good.sku}</p>
+        </article>
+      `;
+     }
+     data += `
    </section>
    </br>${footer}
   </body>
