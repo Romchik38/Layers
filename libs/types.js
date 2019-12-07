@@ -45,6 +45,7 @@ const types = {
     }
   },
   undefined: (param, page) => {
+    console.log(page);
     getTemplate(page);
     const html = page.htmlTemplate();
     const writeHead = [404];

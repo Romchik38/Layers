@@ -14,7 +14,7 @@ const templateHeader = parameters => {
        <ul>
          <li><a href="/" target="_self">Main page</a></li>
          <li><a href="/phones" target="_self">Phones</a></li>
-         <li><a href="#" target="_self">Cases</a></li>
+         <li><a href="/cases" target="_self">Cases</a></li>
        </ul>
     </nav>
   `;

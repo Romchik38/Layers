@@ -11,6 +11,7 @@ const urls = {
     '.js': 'scripts',
   },
   '/phones': catalog,
+  '/cases': catalog,
   '/A620': '/samsungA620-1',
   '/samsungA620-1': good,
 };
