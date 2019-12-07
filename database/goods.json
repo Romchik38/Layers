@@ -2,11 +2,25 @@
   {
     "model": "Samsung A620",
     "sku": "23100",
-    "price": 250
+    "price": 250,
+    "shortDescription": "Nice choice for everyone"
   },
   {
     "model": "Nokia N90",
     "sku": "15201",
-    "price": 450
+    "price": 450,
+    "shortDescription": "Nice phone, nice price"
+  },
+  {
+    "model": "Leather case Black Perl",
+    "sku": "10233",
+    "price": 32,
+    "shortDescription": "It's so black"
+  },
+  {
+    "model": "Ultra touch Cover for iPhone XR",
+    "sku": "5233",
+    "price": 10,
+    "shortDescription": "Good choice for less money"
   }
 ]

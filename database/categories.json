@@ -3,6 +3,12 @@
     "name": "Mobile phones",
     "goods": ["23100", "15201"],
     "url": "/phones",
-    "title": "Mobile Phones - Spheres everywhere"
+    "title": "Mobile Phones - choose your dream"
+  },
+  {
+    "name": "Mobile cases",
+    "goods": ["10233", "5233"],
+    "url": "/cases",
+    "title": "Cases for your lovely phone"
   }
 ]
