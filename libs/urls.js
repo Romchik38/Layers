@@ -7,13 +7,17 @@ const urls = {
   '/*\\.*': {
     '.ico': 'img',
     '.jpeg': 'img',
+    '.jpg': 'img',
     '.png': 'img',
     '.js': 'scripts',
   },
   '/phones': catalog,
   '/cases': catalog,
-  '/A620': '/samsungA620-1',
-  '/samsungA620-1': good,
+  '/galaxy-a30s': '/samsung-galaxy-a30s-32gb-black',
+  '/samsung-galaxy-a30s-32gb-black': good,
+  '/apple-iphone-xr-64gb-white': good,
+  '/leather-case-black-perl': good,
+  '/ultra-touch-caver-for-iphone-xr': good,
 };
 
 const matching = [];

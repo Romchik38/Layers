@@ -23,7 +23,11 @@ const urlsFn = {
     }
     page.parameters['categoryGoods'] = goods;
   },
-  'good': () => 'hello',
+  'good': page => {
+    const data = getparameters({ url: page.url }, 'goods', url)[0];
+    page.parameters['title'] = data.title;
+    page.parameters['good'] = data;
+  },
 };
 
 module.exports = urlsFn;

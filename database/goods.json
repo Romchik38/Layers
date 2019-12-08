@@ -1,26 +1,43 @@
 [
   {
-    "model": "Samsung A620",
+    "model": "Samsung Galaxy A30s 3/32GB Black",
     "sku": "23100",
     "price": 250,
-    "shortDescription": "Nice choice for everyone"
+    "shortDescription": "Nice choice for everyone",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Magna consequat dolore aute duis",
+    "url": "/samsung-galaxy-a30s-32gb-black",
+    "title": "Samsung Galaxy A30s 3/32GB Black | Mobile Spheres",
+    "img": "/samsung-galaxy-30s-3-32gb-black.jpg"
+
   },
   {
-    "model": "Nokia N90",
+    "model": "Apple iPhone XR 64GB White",
     "sku": "15201",
-    "price": 450,
-    "shortDescription": "Nice phone, nice price"
+    "price": 900,
+    "shortDescription": "Brilliant. In every way",
+    "description": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+    "url": "/apple-iphone-xr-64gb-white",
+    "title": "Apple iPhone XR 64GB White | Mobile Spheres",
+    "img": "/apple-iphone-xr-64-gb-white.jpg"
   },
   {
     "model": "Leather case Black Perl",
     "sku": "10233",
     "price": 32,
-    "shortDescription": "It's so black"
+    "shortDescription": "It's so black",
+    "description": "Sit aute minim aliquip ut esse do exercitation tempor laborum pariatur ipsum magna. Officia minim sint esse ex ad nulla tempor amet consectetur cillum officia consequat incididunt dolore ut. Ipsum laborum deserunt eu veniam occaecat laborum cillum nulla consequat ad anim sunt et officia. Dolor consectetur proident cupidatat Lorem pariatur adipisicing velit ullamco voluptate laborum. Commodo est cupidatat adipisicing eu officia ipsum labore.",
+    "url": "/leather-case-black-perl",
+    "title": "Leather case Black Perl | Mobile Spheres",
+    "img": "/leather-case-black-perl.jpg"
   },
   {
     "model": "Ultra touch Cover for iPhone XR",
     "sku": "5233",
     "price": 10,
-    "shortDescription": "Good choice for less money"
+    "shortDescription": "Good choice for less money",
+    "description": "Ipsum et ut fugiat est culpa qui ut nostrud qui commodo elit elit mollit duis laboris. Laboris et enim eu sint excepteur eu sunt cillum mollit tempor in in sit mollit incididunt est veniam. Non excepteur reprehenderit elit et occaecat culpa quis dolor do sit ipsum eu. In labore in reprehenderit fugiat nulla officia sit anim labore do sint. Laborum tempor aute do aute irure reprehenderit enim ut officia sit cillum consequat. Exercitation officia excepteur est nisimolliasdasd",
+    "url": "/ultra-touch-caver-for-iphone-xr",
+    "title": "Ultra touch Cover for iPhone XR | Mobile Spheres",
+    "img": "/ultra-touch-cover-for-iphone-xr.jpg"
   }
 ]
