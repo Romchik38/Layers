@@ -5,11 +5,11 @@ const { main, catalog, good } = require('./urlsfn');
 const urls = {
   '/': main,
   '/*\\.*': {
-    '.ico': 'img',
-    '.jpeg': 'img',
-    '.jpg': 'img',
-    '.png': 'img',
-    '.js': 'scripts',
+    '.ico': 'public/img',
+    '.jpeg': 'public/img',
+    '.jpg': 'public/img',
+    '.png': 'public/img',
+    '.js': 'public/scripts',
   },
   '/phones': catalog,
   '/cases': catalog,
